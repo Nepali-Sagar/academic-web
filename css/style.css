@@ -1,0 +1,157 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  width: 100%;
+  height: 100%;
+  font-family: poppins;
+}
+
+header {
+  width: 100%;
+  height: 14%;
+  /* background-color: red; */
+}
+
+.header-leftside {
+  width: 50%;
+  height: 100%;
+  float: left;
+  /* border: 1px solid black; */
+  /* background-color: grey; */
+  display: flex;
+}
+
+.logo {
+  font-size: 5em;
+  font-weight: bold;
+  /* background-color: red; */
+}
+
+.header-leftside div {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.logoNameUpper {
+  font-size: 1.5em;
+  position: relative;
+  /* background-color: darkblue; */
+}
+.logoNameLower {
+  font-size: 1.5em;
+  position: relative;
+  bottom: 7px;
+  /* background-color: lightblue; */
+}
+
+.header-rightside {
+  width: 50%;
+  height: 100%;
+  float: right;
+  /* border: 1px solid black; */
+  /* background-color: gold; */
+  display: flex;
+  justify-content: end;
+  align-items: center;
+  gap: 5px;
+}
+
+.header-rightside input {
+  border-radius: 5px;
+  padding-left: 4px;
+  height: 26px;
+}
+
+.header-rightside p {
+  margin-right: 5px;
+  font-size: 1.3em;
+  border: 1px solid black;
+  border-radius: 10px;
+  background-color: rgb(206, 206, 206);
+}
+
+nav {
+  width: 100%;
+  height: 8%;
+  /* background-color: blue; */
+}
+
+ul {
+  list-style: none;
+  /* background-color: yellow; */
+  position: relative;
+  top: 10px;
+}
+
+li {
+  width: 10%;
+  height: 100%;
+  font-size: 1.5em;
+  display: inline;
+  margin: 10px;
+}
+
+nav a {
+  text-decoration: none;
+  color: black;
+}
+
+main {
+  width: 100%;
+  height: 70%;
+  /* background-color: green; */
+}
+
+.main-leftside {
+  width: 30%;
+  height: 100%;
+  /* border: 1px solid black; */
+  float: left;
+  /* background-color: grey; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.main-rightside {
+  width: 70%;
+  height: 100%;
+  /* border: 1px solid black; */
+  float: right;
+  /* background-color: gold; */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: start;
+}
+
+.main-rightside h1 {
+  font-size: 4em;
+}
+
+.main-rightside p {
+  text-align: start;
+  width: 50%;
+  margin-top: 5px;
+}
+
+footer {
+  width: 100%;
+  height: 8%;
+  /* border: 1px solid black; */
+  background-color: black;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.footer-right img {
+  width: 40px;
+}
