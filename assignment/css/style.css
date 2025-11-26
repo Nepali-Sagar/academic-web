@@ -1,0 +1,79 @@
+body,
+html {
+  width: 99%;
+  height: 150%;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+header {
+  width: 100%;
+  height: 20%;
+  border: 1px solid black;
+}
+
+nav{
+  width: 100%;
+  height: 100%;
+}
+
+header nav {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  gap: 20px;
+}
+
+header div {
+  width: 100px;
+  height: 50px;
+  border: 1px solid black;
+  margin-left: 20px;
+}
+
+.section-one {
+  width: 100%;
+  height: 30%;
+  border: 1px solid black;
+  display: flex;
+  justify-content: start;
+  align-items: center;
+}
+
+.section-one div {
+  width: 45%;
+  height: 100%;
+  border: 1px solid black;
+  display: flex;
+  flex-direction: column;
+}
+
+.section-two {
+  width: 100%;
+  height: 50%;
+  border: 1px solid black;
+  display: flex;
+  justify-content: start;
+  align-items: center;
+}
+
+.section-two div {
+  height: 100%;
+  border: 1px solid black;
+}
+
+.section-two div p {
+  padding: 10px 30px;
+  font-size: 1.4em;
+}
+
+.img-container {
+  display: flex;
+  justify-content: end;
+  align-items: end;
+}
+
+.section-two div img {
+  width: 40%;
+}
