@@ -1,0 +1,24 @@
+div{
+	border: 2px solid;
+	width: 200px;
+	height: 200px;
+	border-radius: 30px 15px 50px 10px;
+	opacity: 1;
+	background-image:
+	linear-gradient(to bottom,blue, gold);
+	margin-bottom: 20px;
+	
+}
+
+img{
+	border: 4px dashed;
+	border-radius: 50%;
+}
+
+body{
+	background-image:url(img/coffeeLoop.gif), url(img/SunSet.png);
+	background-position: right bottom, left top;
+	background-repeat: no-repeat;
+	background-size: 500px 500px, cover;
+
+}

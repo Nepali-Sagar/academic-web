@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="form.css" />
+    <title>Form</title>
+  </head>
+  <body>
+    <div class="container">
+      <section></section>
+      <form action="/submit" method="get">
+        <!-- fieldset, legend -->
+        <label id="firstName" for="name">First Name</label>
+        <input type="text" name="firstName" />
+
+        <label id="lastName" for="name">Last Name</label>
+        <input type="text" name="lastName" />
+
+        <label for="password">Password</label>
+        <input type="password" />
+
+        <label for="number">Phone no</label>
+        <input type="number" />
+
+        <div class="gender">
+          <label for="gender">Male</label>
+          <input type="radio" name="gender" />
+
+          <label for="gender">Female</label>
+          <input type="radio" name="gender" />
+
+          <label for="gender">Other</label>
+          <input type="radio" name="gender" />
+        </div>
+
+        <input type="button" onclick="console.log('click')" value="CLick Me!">
+
+        <input type="submit" />
+      </form>
+    </div>
+  </body>
+</html>
