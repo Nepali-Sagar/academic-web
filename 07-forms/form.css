@@ -1,0 +1,213 @@
+/**
+ * Form Styling Demo
+ * 
+ * Program: HTML form with proper styling and layout
+ * Demonstrates:
+ * - Form element styling and organization
+ * - Input field styling (text, password, number, radio)
+ * - Label and fieldset organization
+ * - Button styling
+ * - Responsive form layout using flexbox
+ */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/**
+ * Main container - flexbox layout for side-by-side arrangement
+ * Left side: decorative section
+ * Right side: form
+ */
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    min-height: 100vh;
+}
+
+.container {
+    width: 100%;
+    max-width: 800px;
+    height: auto;
+    min-height: 500px;
+    display: flex;
+    justify-content: center;
+    align-items: stretch;
+    gap: 10px;
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+}
+
+/**
+ * Decorative section on the left
+ * Black background for visual contrast
+ */
+.form-decoration {
+    background-color: black;
+    width: 0%;
+    min-width: 0;
+    display: none;
+}
+
+/**
+ * Form styling
+ * Flexbox column layout for vertical form organization
+ */
+form {
+    width: 100%;
+    padding: 40px 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    gap: 15px;
+}
+
+/**
+ * Label styling
+ * Clear, readable labels for form inputs
+ */
+form label {
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 5px;
+}
+
+/**
+ * Input field styling (text, password, number, etc.)
+ * Consistent styling across all input types
+ */
+form input[type="text"],
+form input[type="password"],
+form input[type="number"],
+form input[type="email"] {
+    width: 100%;
+    padding: 10px 12px;
+    font-size: 1em;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+form input[type="text"]:focus,
+form input[type="password"]:focus,
+form input[type="number"]:focus,
+form input[type="email"]:focus {
+    outline: none;
+    border-color: #667eea;
+    box-shadow: 0 0 8px rgba(102, 126, 234, 0.3);
+}
+
+/**
+ * Fieldset for grouping related form elements
+ * Used for radio button groups (gender selection)
+ */
+.gender {
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    padding: 15px;
+    background-color: #f9f9f9;
+    margin: 10px 0;
+}
+
+.gender legend {
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+/**
+ * Radio button and label styling
+ * Arranged vertically for better readability
+ */
+.gender label {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+    font-weight: normal;
+    cursor: pointer;
+}
+
+.gender label:last-child {
+    margin-bottom: 0;
+}
+
+.gender input[type="radio"] {
+    margin-right: 10px;
+    cursor: pointer;
+    width: 18px;
+    height: 18px;
+}
+
+/**
+ * Button styling
+ * Primary and submit buttons with different styles
+ */
+input[type="button"],
+input[type="submit"] {
+    padding: 12px 24px;
+    font-size: 1em;
+    font-weight: 600;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin-top: 10px;
+}
+
+.btn-primary {
+    background-color: #f0f0f0;
+    color: #333;
+}
+
+.btn-primary:hover {
+    background-color: #e0e0e0;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.btn-submit {
+    background-color: #667eea;
+    color: white;
+}
+
+.btn-submit:hover {
+    background-color: #5568d3;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(102, 126, 234, 0.3);
+}
+
+.btn-submit:active,
+.btn-primary:active {
+    transform: translateY(0);
+    box-shadow: none;
+}
+
+/* Responsive design for smaller screens */
+@media (max-width: 600px) {
+    .container {
+        flex-direction: column;
+        min-height: auto;
+    }
+    
+    form {
+        padding: 30px 20px;
+    }
+    
+    input[type="button"],
+    input[type="submit"] {
+        width: 100%;
+    }
+}

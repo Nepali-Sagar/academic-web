@@ -1,0 +1,52 @@
+/**
+ * Styling for JavaScript Functions Demo
+ * Demonstrates flexbox layout and interactive box styling
+ */
+
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: black;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+/**
+ * Box styling - demonstrates viewport units and flexbox
+ * Width: 10% of viewport width
+ * Height: 20% of viewport height
+ */
+.box {
+    width: 10vw;
+    height: 20vh;
+    background-color: royalblue;
+    margin-bottom: 10px;
+    font-size: 1.5em;
+    font-family: 'Courier New', Courier, monospace;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+    border: 2px solid white;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: transform 0.3s ease, border-color 0.3s ease;
+}
+
+/**
+ * Hover effect - scales up box and changes border
+ * Used to show interactive feedback
+ */
+.box:hover {
+    transform: scale(1.05);
+    border: 2px solid gold;
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.3);
+}

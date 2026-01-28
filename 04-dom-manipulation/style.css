@@ -1,0 +1,74 @@
+/**
+ * Styling for DOM Manipulation Demo
+ * Demonstrates flexible box sizing and display properties
+ */
+
+/* Reset default margins and padding */
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: #f0f0f0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    gap: 20px;
+    flex-wrap: wrap;
+    padding: 20px;
+}
+
+/**
+ * Box 1: Styled with flexbox for centered content
+ * Initial size: 100x100px (changed to 200x200px by JavaScript)
+ * Color: Will be changed to brown by JavaScript
+ */
+.box {
+    height: 100px;
+    width: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-size: 2em;
+    font-family: Arial, Helvetica, sans-serif;
+    transition: all 0.3s ease;
+}
+
+/**
+ * Box 2 and Box 3: Both start at 200x200px
+ * Box 2: Interactive, changes opacity of Box 3 when clicked
+ * Box 3: Orange background, starts invisible (opacity: 0)
+ */
+.box2, #box3 {
+    height: 200px;
+    width: 200px;
+    background-color: royalblue;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-size: 2em;
+    font-family: Arial, Helvetica, sans-serif;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: opacity 0.3s ease;
+}
+
+/**
+ * Box 3: Orange background, starts invisible
+ * Opacity increases from clicks on Box 2
+ * Also resets to 1 every 2 seconds via setInterval
+ */
+#box3 {
+    background-color: orange;
+    opacity: 0;
+}
+
+/* Hover effect for interactive boxes */
+.box2:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}

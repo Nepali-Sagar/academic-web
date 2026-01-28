@@ -1,0 +1,137 @@
+/**
+ * CSS Float Layout Demo
+ * 
+ * Program: Traditional two-column web page layout using CSS float
+ * Demonstrates:
+ * - Float-based layout technique (pre-flexbox method)
+ * - Two-column header
+ * - Horizontal navigation menu
+ * - Main content with sidebar
+ * - Clearing floats to prevent layout issues
+ */
+
+/* ========== HEADER SECTION ========== */
+/**
+ * Left header section - floated left
+ * Takes up 42% of width + 4% padding
+ */
+.first-dev {
+    padding: 4%;
+    background-color: blue;
+    width: 42%;
+    float: left;
+    color: white;
+}
+
+/**
+ * Right header section - floated right
+ * Takes up 42% of width + 4% padding
+ */
+.second-dev {
+    padding: 4%;
+    background-color: green;
+    width: 42%;
+    float: right;
+    color: white;
+}
+
+/**
+ * Clear float helper class
+ * Resets floating context to prevent overflow issues
+ */
+.clear {
+    clear: both;
+}
+
+/* ========== NAVIGATION SECTION ========== */
+/**
+ * Navigation container with red background
+ * Full width, spans entire container
+ */
+.navigation {
+    background-color: red;
+    float: left;
+    width: 100%;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    padding: 0;
+}
+
+/**
+ * Navigation list - removes default list styling
+ */
+nav ul {
+    list-style: none;
+    display: block;
+    float: left;
+    margin: 0;
+    padding: 0;
+}
+
+/**
+ * List items displayed inline for horizontal menu
+ */
+nav ul li {
+    display: inline;
+}
+
+/**
+ * Navigation links styling
+ * Yellow background with black border
+ */
+nav ul li a {
+    font-size: 20px;
+    text-decoration: none;
+    color: black;
+    border: 1px solid black;
+    padding: 5px;
+    background-color: yellow;
+    display: inline-block;
+    margin: 0 2px;
+    transition: background-color 0.3s ease;
+}
+
+nav ul li a:hover {
+    background-color: gold;
+}
+
+/* ========== MAIN CONTENT SECTION ========== */
+/**
+ * Left sidebar - takes 20% width
+ * Floated left to create two-column layout
+ */
+#left-bar {
+    padding: 4%;
+    background-color: grey;
+    width: 20%;
+    float: left;
+    color: white;
+    min-height: 300px;
+}
+
+/**
+ * Right main content area - takes 64% width
+ * Floated right to sit beside left sidebar
+ */
+#right-bar {
+    padding: 4%;
+    background-color: gold;
+    width: 64%;
+    float: right;
+    min-height: 300px;
+}
+
+/* ========== FOOTER SECTION ========== */
+/**
+ * Footer spans full width below all floated elements
+ * Clear both floats to ensure proper positioning
+ */
+footer {
+    margin-top: 0.5%;
+    padding: 4%;
+    background-color: green;
+    color: white;
+    clear: both;
+    text-align: center;
+}
+

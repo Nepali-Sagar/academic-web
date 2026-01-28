@@ -1,0 +1,67 @@
+/**
+ * Styling for JavaScript Basics Demo
+ * Demonstrates button styling and box positioning with CSS
+ */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    width: 100%;
+    height: 100%;
+    background-color: rgb(247, 241, 228);
+    font-family: Arial, sans-serif;
+}
+
+/* Main container for content */
+main {
+    height: 100%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 20px;
+    padding: 20px;
+}
+
+/* Button styling */
+button {
+    width: 100px;
+    height: 50px;
+    border: 4px solid rgb(157, 134, 3);
+    border-radius: 9px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: bold;
+    transition: all 0.3s ease;
+}
+
+button:hover {
+    font-size: 1.1em;
+    background-color: rgba(157, 134, 3, 0.1);
+}
+
+/* Primary button styling */
+#btn {
+    border: 4px solid rgb(17, 74, 219);
+    background-color: rgb(14, 166, 222);
+    color: white;
+}
+
+#btn:hover {
+    background-color: rgb(14, 166, 222);
+    box-shadow: 0 4px 8px rgba(14, 166, 222, 0.3);
+}
+
+/* Box element that can be moved with arrow keys */
+#box {
+    width: 100px;
+    height: 100px;
+    background-color: tomato;
+    position: relative;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    transition: all 0.1s ease;
+}

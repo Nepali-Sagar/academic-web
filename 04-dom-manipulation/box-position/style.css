@@ -1,0 +1,38 @@
+/**
+ * Styling for Box Position Control
+ * Demonstrates CSS positioning (relative) with JavaScript manipulation
+ */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #f5f5f5;
+    padding: 20px;
+    min-height: 100vh;
+    font-family: Arial, sans-serif;
+}
+
+/**
+ * Box element that moves with arrow keys
+ * position: relative allows top/left properties to move it
+ * from its normal position in the document flow
+ */
+.box1 {
+    width: 100px;
+    height: 100px;
+    background-color: royalblue;
+    position: relative;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: all 0.1s ease;
+    cursor: grab;
+}
+
+.box1:hover {
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+    transform: scale(1.05);
+}

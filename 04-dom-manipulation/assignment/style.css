@@ -1,0 +1,70 @@
+/**
+ * Styling for DOM Assignment - Click Button Demo
+ * Demonstrates flexbox centering and interactive button styling
+ */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100%;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    font-family: Arial, sans-serif;
+}
+
+/**
+ * Main container - flexbox centered on page
+ * Changes background color when button is clicked
+ * Uses viewport units for responsive sizing (30vw x 30vh)
+ */
+.container {
+    width: 30vw;
+    height: 30vh;
+    border: 2px solid black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    border-radius: 12px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s ease;
+}
+
+/**
+ * Button styling
+ * Changes color on hover for better interactivity
+ * Shows visual feedback when user hovers over button
+ */
+button {
+    font-size: 1.2em;
+    border: none;
+    border-radius: 6px;
+    padding: 12px 24px;
+    background-color: #f0f0f0;
+    cursor: pointer;
+    font-weight: bold;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/**
+ * Hover state - provides visual feedback
+ * Color changes to indicate interactive element
+ */
+button:hover {
+    background-color: royalblue;
+    color: white;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+/**
+ * Active state - button pressed
+ */
+button:active {
+    transform: translateY(0);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}

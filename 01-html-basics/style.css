@@ -1,0 +1,14 @@
+/**
+ * Style for DOM Keyboard Control Demo
+ * Demonstrates using CSS positioning with JavaScript DOM manipulation
+ */
+
+/* Box element that will be moved with keyboard arrow keys */
+#div1 {
+    width: 200px;
+    height: 200px;
+    background-color: orange;
+    position: relative;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}

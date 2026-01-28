@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="form.css" />
+    <title>HTML Form Example - User Registration Form</title>
+</head>
+<body>
+    <div class="container">
+        <!-- Decorative section element -->
+        <section class="form-decoration"></section>
+        
+        <!-- User registration form -->
+        <form action="/submit" method="get">
+            <!-- Text input fields -->
+            <label for="firstName">First Name</label>
+            <input type="text" id="firstName" name="firstName" placeholder="Enter first name" />
+
+            <label for="lastName">Last Name</label>
+            <input type="text" id="lastName" name="lastName" placeholder="Enter last name" />
+
+            <!-- Password field -->
+            <label for="password">Password</label>
+            <input type="password" id="password" name="password" placeholder="Enter password" />
+
+            <!-- Number input -->
+            <label for="phone">Phone Number</label>
+            <input type="number" id="phone" name="phone" placeholder="Enter phone number" />
+
+            <!-- Radio button group for gender selection -->
+            <fieldset class="gender">
+                <legend>Gender</legend>
+                <label for="male">
+                    <input type="radio" id="male" name="gender" value="male"> Male
+                </label>
+                <label for="female">
+                    <input type="radio" id="female" name="gender" value="female"> Female
+                </label>
+                <label for="other">
+                    <input type="radio" id="other" name="gender" value="other"> Other
+                </label>
+            </fieldset>
+
+            <!-- Action buttons -->
+            <input type="button" class="btn-primary" onclick="console.log('Button clicked')" value="Click Me!">
+            <input type="submit" class="btn-submit" value="Submit" />
+        </form>
+    </div>
+</body>
+</html>
+

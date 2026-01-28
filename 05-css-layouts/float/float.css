@@ -1,0 +1,120 @@
+/**
+ * CSS Float Layout Demo
+ * 
+ * Program: Traditional web page layout using CSS float property
+ * Demonstrates:
+ * - Float-based column layouts (pre-flexbox/grid era)
+ * - Clearing floats to prevent layout overflow
+ * - Multiple column designs
+ * - This method is now largely superseded by flexbox and grid
+ */
+
+/* ========== RESET ========== */
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html, body {
+    width: 100%;
+    height: 100%;
+    background-color: #f5f5f5;
+}
+
+/* ========== UTILITY CLASSES ========== */
+/**
+ * Clear float - resets float context
+ * Prevents parent container collapse and layout issues
+ */
+.clear {
+    clear: both;
+}
+
+/* ========== PAGE STRUCTURE ========== */
+/**
+ * Header - spans full width with margins
+ * Uses float to maintain alignment consistency
+ */
+header {
+    width: 90%;
+    height: 10%;
+    float: left;
+    border: 3px solid #333;
+    margin: 20px 60px;
+    background-color: #007bff;
+    color: white;
+}
+
+/**
+ * Main content section - contains left and right columns
+ * Uses float to enable multi-column layout
+ */
+section {
+    width: 90%;
+    height: 70%;
+    float: left;
+    margin: 5px 60px;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+/**
+ * Left sidebar - 20% width, floated left
+ * Typically contains navigation or supplementary content
+ */
+#left-bar {
+    width: 20%;
+    height: 100%;
+    border: 3px solid #333;
+    float: left;
+    background-color: #e9ecef;
+    padding: 10px;
+}
+
+/**
+ * Right main content area - 79% width, floated right
+ * Takes up remaining space after left sidebar
+ */
+#right-bar {
+    width: 79%;
+    height: 100%;
+    border: 3px solid #333;
+    float: right;
+    background-color: #fff;
+    padding: 10px;
+}
+
+/**
+ * Footer - full width, below all floated elements
+ * Use 'clear' to ensure footer is below floats
+ */
+footer {
+    width: 90%;
+    height: 7%;
+    float: left;
+    border: 3px solid #333;
+    margin: 20px 60px;
+    background-color: #28a745;
+    color: white;
+    clear: both;
+}
+
+/* ========== RESPONSIVE ADJUSTMENTS ========== */
+@media (max-width: 768px) {
+    header, section, footer {
+        width: 95%;
+        margin-left: 20px;
+        margin-right: 20px;
+    }
+    
+    #left-bar {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+    
+    #right-bar {
+        width: 100%;
+    }
+}
+
+
