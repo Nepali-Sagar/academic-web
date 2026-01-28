@@ -1,32 +1,36 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+<head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Google Fonts - Poppins -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
-      rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet"
     />
     <link rel="stylesheet" href="flex.css" />
-    <title>Web Development: Flex</title>
-  </head>
-  <body>
-    <!-- Header Start -->
+    <title>CSS Flexbox Layout - Modern Flexible Layout</title>
+</head>
+<body>
+    <!-- Header Section -->
     <header></header>
-    <!-- Header End -->
 
-    <!-- Main Content Start -->
+    <!-- Main Content Section - Three Columns with Reordered Layout -->
     <section>
-      <div id="left-bar"></div>
-      <div class="center-bar"></div>
-      <div id="right-bar"></div>
+        <!-- Left sidebar - appears third due to order: 3 -->
+        <div id="left-bar"></div>
+        
+        <!-- Center bar - appears first due to order: 1 -->
+        <div class="center-bar"></div>
+        
+        <!-- Right content - appears second due to order: 2 -->
+        <div id="right-bar"></div>
     </section>
-    <!-- Content End -->
 
-    <!-- Footer Start -->
+    <!-- Footer Section -->
     <footer></footer>
-    <!-- Footer End -->
-  </body>
+</body>
 </html>
+

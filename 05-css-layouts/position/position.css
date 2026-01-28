@@ -1,94 +1,191 @@
+/**
+ * CSS Positioning Demo
+ * 
+ * Program: Demonstrates absolute positioning, z-index, and transforms
+ * Functionality:
+ * - Absolutely positioned overlapping boxes
+ * - Z-index stacking context for layering
+ * - CSS transforms (rotate) for visual effects
+ * - Demonstrates how absolute positioning removes elements from normal flow
+ */
+
+/* ========== RESET ========== */
 * {
-  margin: 0;
-  padding: 0;
+    margin: 0;
+    padding: 0;
 }
 
-body,
-html {
-  width: 100%;
-  height: 100%;
-  font-family: "Poppins";
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  gap: 10px;
+/* ========== PAGE STRUCTURE ========== */
+html, body {
+    width: 100%;
+    height: 100%;
+    font-family: "Poppins", Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    background-color: #f5f5f5;
 }
-/* Header Start */
+
+/**
+ * Header Section
+ */
 header {
-  width: 80%;
-  height: 10%;
-  border: 3px solid;
+    width: 80%;
+    height: 10%;
+    border: 3px solid #333;
+    background-color: #007bff;
+    color: white;
 }
 
-/* Main Content Start */
-
+/**
+ * Main Content Section
+ * Uses flexbox with row-reverse and position: relative for absolutely positioned children
+ */
 section {
-  width: 80%;
-  height: 70%;
-  display: flex;
-  flex-direction: row-reverse;
-  
-  gap: 10px;
+    width: 80%;
+    height: 70%;
+    display: flex;
+    flex-direction: row-reverse;
+    gap: 10px;
+    position: relative;  /* Required for absolute positioning of child elements */
 }
+
+/**
+ * Left Sidebar
+ */
 #left-bar {
-  width: 20%;
-  height: 100%;
-  border: 3px solid;
+    width: 20%;
+    height: 100%;
+    border: 3px solid #333;
+    background-color: #e9ecef;
 }
 
+/**
+ * Right Bar - Container for absolutely positioned boxes
+ * position: relative creates positioning context for absolutely positioned children
+ */
 #right-bar {
-  width: 80%;
-  height: 100%;
-  border: 3px solid;
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
+    width: 80%;
+    height: 100%;
+    border: 3px solid #333;
+    background-color: #fff;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    position: relative;
 }
 
+/**
+ * Positioned boxes styling
+ * All boxes have:
+ * - Absolute positioning (removed from normal flow)
+ * - Custom z-index for layering
+ * - CSS transforms for rotation effects
+ * - Hover effects for interactivity
+ */
 #right-bar div {
-  width: 200px;
-  height: 300px;
-  border: 2.5px solid black;
-  border-radius: 9px;
+    width: 200px;
+    height: 300px;
+    border: 2.5px solid black;
+    border-radius: 9px;
+    color: white;
+    text-align: center;
+    font-size: 1.5em;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+}
 
-  color: white;
-  text-align: center;
-  font-size: 1.5em;
+/**
+ * Hover effect - adds shadow for depth
+ */
+#right-bar div:hover {
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+    transform: scale(1.05);
 }
-#right-bar div:hover{
-  box-shadow: 1px 1px 10px black;
-}
-#right-bar div:active{
+
+/**
+ * Active state - hides box on click
+ */
+#right-bar div:active {
     display: none;
 }
 
-.box1{
+/**
+ * Box 1 - Red color
+ * Positioned absolutely with highest z-index
+ * Rotated 10 degrees
+ */
+.box1 {
+    background-color: #dc3545;
     position: absolute;
-    z-index: 3;
+    z-index: 3;          /* Appears on top */
     transform: rotate(10deg);
+    cursor: pointer;
 }
 
-.box2{
+/**
+ * Box 2 - Green color
+ * Middle z-index layer
+ * Rotated 20 degrees
+ */
+.box2 {
+    background-color: #90ee90;
     position: absolute;
-    z-index: 2;
+    z-index: 2;          /* Middle layer */
     transform: rotate(20deg);
+    cursor: pointer;
 }
 
-.box3{
+/**
+ * Box 3 - Blue color
+ * Lowest z-index
+ * Rotated 30 degrees
+ */
+.box3 {
+    background-color: #007bff;
     position: absolute;
-    z-index: 1;
+    z-index: 1;          /* Appears below others */
     transform: rotate(30deg);
+    cursor: pointer;
 }
 
-
-/* Main Content End */
-
-/* Footer Start */
+/**
+ * Footer Section
+ */
 footer {
-  width: 80%;
-  height: 10%;
-  border: 3px solid;
+    width: 80%;
+    height: 10%;
+    border: 3px solid #333;
+    background-color: #28a745;
+    color: white;
 }
-/* Footer End */
+
+/* ========== RESPONSIVE DESIGN ========== */
+@media (max-width: 768px) {
+    header, section, footer {
+        width: 95%;
+    }
+    
+    section {
+        flex-direction: column;
+    }
+    
+    #left-bar {
+        width: 100%;
+        height: auto;
+        min-height: 100px;
+    }
+    
+    #right-bar {
+        width: 100%;
+        height: auto;
+        min-height: 300px;
+    }
+}
+
